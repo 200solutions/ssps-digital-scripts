@@ -1,0 +1,64 @@
+{block content}
+    {* Hlavička *}
+    {include '../_header.latte', plain => false, active => 'home'}
+    {* Hlavní stránka *}
+    <div id='main_wrapper__homepage'>
+        {* Carousely knih *}
+        <section class='section-book-carousel'>
+            <book-section></book-section>
+        </section>
+        {* Novinky *}
+        <section id='section-news'>
+            <h2>Novinky</h2>
+            {* Novinky *}
+            <el-row :gutter='50'>
+                {* Poslední komentáře *}
+                <el-col :xs='24' :sm='12'>
+                    <h3>Naši redaktoři</h3>
+                    <div class='top-authors'>
+                        <redactors-list></redactors-list>
+                    </div>
+                </el-col>
+                {* Aktuality *}
+                <el-col :xs='24' :sm='12'>
+                    <div>
+                        <h3>Aktuality</h3>
+                        <ul class='news-list'>
+                            {foreach $news as $post}
+                                <li>
+                                    <div class='news-list__icon'>
+                                        <div class='news-list__date'>
+                                            <div class='news-list__date__day'>{$post->created_at|date:'%d'}</div>
+                                            <div class='news-list__date__month'>{$post->created_at|date:'F'|upper|truncate:3,''}</div>
+                                        </div>
+                                    </div>
+                                    <div class='news-list__content'>
+                                        <h4>{$post->title}</h4>
+                                        {* Informace *}
+                                        <div class='news-meta'>
+                                            <span><i class='el-icon-date'></i> {$post->created_at|date:'%d.%m. %Y'}</span>
+                                        </div>
+                                        <p>{$post->content}</p>
+                                    </div>
+                                </li>
+                            {/foreach}
+                        </ul>
+                    </div>
+                </el-col>
+            </el-row/>
+        </section>
+        {* Žebříček *}
+        <section id='section-ladder'>
+            <h2>Žebříček</h2>
+            {* Carousel žebříčku *}
+            <ladder></ladder>
+        </section>
+        {* Patička *}
+        <footer>
+            <div class='credits'>
+                <span class='credits__copyright'>Copyright © {date('Y')} | Smíchovská střední průmyslová škola</span>
+                <span class='credits__author'>Code & Design by Marek Kejda</span>
+            </div>
+        </footer>
+    </div>
+{/block}

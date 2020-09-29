@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^skripta.ssps.cz$ [NC,OR]
+RewriteCond %{REQUEST_URI} !www/
+RewriteRule (.*) /www/$1 [L]

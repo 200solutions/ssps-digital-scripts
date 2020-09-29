@@ -1,0 +1,647 @@
+/* Druhé nadpisy */
+#main_wrapper__homepage {
+    padding-top: 75px;
+}
+
+#main_wrapper__homepage p {
+    letter-spacing: .05em;
+}
+
+h2 {
+    position: relative;
+    letter-spacing: 2px;
+}
+
+#main_wrapper__homepage h2::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 60px;
+    bottom: -12px;
+    background-color: #00497B;
+}
+
+/* Sekce knih */
+.section-book-carousel {
+    margin-top: 50px;
+}
+
+.section-book-carousel h2 {
+    margin-bottom: 25px;
+    padding-left: 75px;
+}
+
+/* Carousel knih */
+.book-carousel {
+    position: relative;
+}
+
+/* Item v book carouselu */
+.book-carousel__item {
+    height: 250px;
+    padding: 25px;
+    padding-left: 50px;
+    border-radius: 10px;
+}
+
+.owl-carousel .owl-stage-outer {
+    padding-bottom: 8px;
+}
+
+/* Navigace carouselu */
+.nav {
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+    width: 100%;
+
+    /* Zruší detekci mouse eventů (umožní ovládat carousel v místě navigation divu) */
+    pointer-events: none;
+
+    /* Přidá odsazení po stranách */
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* Zapne detekci mouse eventů na šipkách */
+.nav__prev, .nav__next {
+    pointer-events: auto;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    opacity: .5;
+    transition: opacity .5s;
+}
+
+/* Ukáže správný cursor na hoveru */
+.nav__prev:hover, .nav__next:hover {
+    cursor: pointer;
+}
+
+/* Ukáže správný cursor na hoveru */
+.nav__prev.disabled, .nav__next.disabled {
+    opacity: 0;
+    cursor: default;
+}
+
+.nav__next {
+    float: right;
+}
+
+/* Odstraní defaultní šipky */
+.nav__prev span, .nav__next span  {
+    display: none;
+}
+
+/* Přidá šipky do navigace */
+.nav__prev::after {
+    font-size: 3em;
+    content: '←';
+}
+
+.nav__next::after {
+    font-size: 3em;
+    content: '→';
+}
+
+/* Informační část */
+.book-info {
+    margin-left: 225px;
+    transition: transform .5s;
+}
+
+.book-info h3 {
+    opacity: .75;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.05em;
+}
+
+.book-info p {
+    margin-top: 15px;
+    opacity: .55;
+    text-align: justify;
+}
+
+.book-info__button {
+    position: absolute;
+    bottom: 25px;
+}
+
+.book-carousel__item__book-meta, .book-meta--standard {
+    margin-top: 10px !important;
+    font-size: .75em;
+    opacity: .55;
+}
+
+.book-name {
+    opacity: .75;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Sekce žebříček */
+#section-ladder {
+    width: 100%;
+    height: auto;
+}
+
+#section-ladder h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 75px;
+}
+
+.ladder-carousel__item {
+    height: auto;
+}
+
+.ladder-carousel__item ul {
+    list-style: none;
+}
+
+.ladder-carousel__item ul li {
+    clear: both;
+    height: 150px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.ladder-carousel__item ul li a {
+    color: black;
+}
+
+
+.ladder-carousel__item ul li:last-child {
+    border-bottom: none;
+}
+
+.ladder-carousel__item ul li:hover {
+    cursor: pointer;
+}
+
+.ladder-carousel__item ul li:hover h4 {
+    color: #00497B;
+}
+
+.ladder-carousel__item .book.bk-small {
+    display: block;
+    width: 100px;
+    height: 150px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    margin-right: 25px;
+    float: left;
+}
+
+/* Nadpisy */
+.ladder-carousel__item h3 {
+    margin-bottom: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #ddd;
+}
+
+.ladder-carousel__item h4 {
+    margin-bottom: 10px;
+}
+
+.ladder-carousel__item h5 {
+    margin-bottom: 10px;
+    opacity: .55;
+    font-size: .75em;
+}
+
+/* Metadata o knize */
+.book-meta {
+    font-size: .75em;
+    opacity: .55;
+    position: absolute;
+    bottom: 25px;
+    left: 125px;
+}
+
+.book-meta span {
+    margin-right: 5px;
+}
+
+/* Sekce novinky */
+#section-news {
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-bottom: 50px;
+    background: linear-gradient(white, #F2F2F2);
+}
+
+#section-news h2 {
+    padding-top: 25px;
+    margin-bottom: 50px;
+}
+
+#section-news h3 {
+    padding-top: 25px;
+    border-top: 1px solid #ddd;
+}
+
+.news-list {
+    list-style: none;
+}
+
+.news-list li {
+    margin-top: 25px;
+    padding-bottom: 25px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    min-height: 138px;
+}
+
+.news-list li:last-child {
+    border-bottom: none;
+}
+
+.news-list__icon {
+    margin-bottom: 25px;
+    margin-right: 25px;
+    float: left;
+}
+
+.news-list__date {
+    border-radius: 4px;
+    width: 55px;
+    height: 75px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
+
+.news-list__date__day {
+    position: relative;
+    height: 50px;
+    background-color: orange;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 2em;
+    background: linear-gradient(white, #F2F2F2);
+    border-radius: 4px 4px 0 0;
+    opacity: .55;
+}
+
+.news-list__date__day::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .05));
+    height: 50%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.news-list__date__month {
+    height: 25px;
+    background-color: cyan;
+    width: 100%;
+    text-align: center;
+    line-height: 25px;
+    background: black;
+    color: white;
+    font-weight: 800;
+    border-radius: 0 0 4px 4px;
+    opacity: .75;
+}
+
+.news-list__content h4, .comments-list h4 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.comments-list a {
+    color: black;
+}
+
+.news-list__content p {
+    opacity: .55;
+}
+
+.news-meta, .comments-meta {
+    font-size: .75em;
+    opacity: .55;
+    padding-bottom: 15px;
+}
+
+.news-meta span, .comments-meta span {
+    margin-right: 5px;
+}
+
+.top-authors {
+    /* Seznam byl posunut o 10px, aby stín itemů nebyl uřízlí */
+    width: calc(100% + 10px);
+    transform: translate(-10px, 0);
+    padding-top: 25px;
+}
+
+.redaction-selection .news-list__content {
+    margin-left: 125px;
+}
+
+/* Neznámá sekce */
+#section-continue {
+    background: linear-gradient(white, #F2F2F2);
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+#section-continue h2 {
+    padding-top: 50px;
+}
+
+#section-continue .section-wrapper {
+    height: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-continue__info {
+    margin-left: 200px;
+}
+
+.section-continue__info .progress-bar {
+    padding-top: 10px;
+}
+
+.section-continue__info__categories {
+    padding-top: 20px;
+    list-style: none;
+}
+
+.section-continue__info__categories li {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgba(0, 0, 0, .55);
+}
+
+.section-continue__info__categories li.possible:hover {
+    cursor: pointer;
+}
+
+.section-continue__info__categories li.possible:hover, .section-continue__info__categories li.possible:hover a {
+    color: #00497B;
+}
+
+.section-continue__info__categories li:last-of-type {
+    border: none;
+}
+
+.section-continue__info__categories li::after {
+    transition: right .2s;
+    font-family: element-icons !important;
+    position: absolute;
+    content: "\e6e0";
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 5px;
+}
+
+.section-continue__info__categories li.possible:hover::after {
+    right: 2px;
+}
+
+.possible a {
+    color: black;
+}
+
+/* Patička */
+#main_wrapper__users footer {
+    margin-top: 50px;
+}
+
+#main_wrapper__homepage footer {
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+footer .credits {
+    text-transform: uppercase;
+    font-size: .8em;
+    height: 60px;
+    border-top: 1px solid #ddd;
+    line-height: 60px;
+    color: #888;
+}
+
+footer .credits__copyright {
+    float: left;
+}
+
+footer .credits__author {
+    float: right;
+}
+
+.button {
+    border: 1px solid #ddd;
+}
+
+/* CSS pro tablety */
+@media only screen and (max-width: 1200px) {
+    .section-continue__book {
+        display: none;
+    }
+    .section-continue__info {
+        margin-left: 0;
+    }
+}
+
+/* CSS pro telefony */
+@media only screen and (max-width: 768px) {
+
+    .section-continue__book {
+        display: block;
+    }
+
+    /* Sekce oblíbené */
+    /* Ostraní odsazení a kulaté rohy z carousel itemů */
+    .book-carousel__item {
+        margin-right: 0;
+    }
+
+    /* Zakryje šipky */
+    .nav__prev::after, .nav__next::after {
+        visibility: hidden;
+    }
+
+    /* Item v book carouselu */
+    .book-carousel__item {
+        height: 525px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+
+    .book-carousel__item .book {
+        left: calc(50% - 75px);
+    }
+
+    /* Informační část */
+    .book-info {
+        margin-left: 0;
+        margin-top: 225px;
+    }
+
+    .book-info a {
+        display: block;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .book-info h3 {
+        padding-top: 25px;
+    }
+
+    .section-book-carousel {
+        margin-top: 25px;
+    }
+
+    .section-book-carousel h2 {
+        margin-bottom: 25px;
+        padding-left: 25px;
+    }
+
+    /* Sekce předměty */
+    #section-subjects {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 50px;
+        width: 100%;
+        background: linear-gradient(white, #F2F2F2);
+    }
+
+    /* Item v book carouselu */
+    .ladder-carousel__item {
+        height: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #section-subjects h2 {
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+
+    /* Sekce žebříček */
+    #section-ladder h2 {
+        padding-left: 25px;
+        margin-top: 25px;
+    }
+
+    #section-ladder .book-meta {
+        bottom: 25px;
+        left: 0;
+        transform: translate(0, 50%);
+    }
+
+    .ladder-carousel__item ul li {
+        height: 175px;
+        margin-bottom: 25px;
+    }
+
+    .ladder-carousel__item ul li:last-child {
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Sekce novinky */
+    #section-news {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 50px;
+        background: linear-gradient(white, #F2F2F2);
+    }
+
+    #section-news h2 {
+        padding-top: 0;
+    }
+
+    #section-news h3 {
+        border-top: 1px solid #ddd;
+    }
+
+    #section-news .news-list li {
+        height: auto;
+    }
+
+    #section-news .news-list li:last-child {
+        border-bottom: none;
+    }
+
+    .redaction-selection {
+        height: 270px;
+    }
+
+    #section-continue {
+        padding: 0;
+        padding-left: 25px;
+        padding-right: 25px;
+        background: none;
+    }
+
+    #section-continue h2 {
+        padding-top: 0;
+    }
+
+    #section-continue {
+        overflow: auto;
+    }
+
+    .book-info__button {
+        width: 100%;
+    }
+
+    .section-continue__info {
+        margin-left: 0;
+        padding-top: 250px;
+    }
+
+    .section-continue__read-book {
+        position: relative;
+        margin-bottom: 25px;
+    }
+
+    .section-continue__book {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    footer {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    footer .credits {
+        border-top: none;
+        margin-bottom: 25px;
+    }
+
+    .credits {
+        overflow: auto;
+        height: auto !important;
+        padding: 10px !important;
+    }
+
+    .credits__copyright {
+        display: block;
+        width: 100%;
+        clear: both;
+        float: none;
+        text-align: center;
+        line-height: 20px;
+    }
+
+    .credits__author {
+        display: block;
+        width: 100%;
+        clear: both;
+        float: none;
+        text-align: center;
+        line-height: 25px;
+    }
+}

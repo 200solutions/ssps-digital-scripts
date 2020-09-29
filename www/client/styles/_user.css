@@ -1,0 +1,97 @@
+#main_wrapper__users {
+
+    margin-top: 125px;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+#main_wrapper__users h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+#main_wrapper__users h3 {
+    font-size: .7em;
+    opacity: .25;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.profile-overview {
+    width: 100%;
+    height: 255px;
+    margin-bottom: 25px;
+}
+
+.profile-overview__profile-picture {
+    width: 100%;
+    height: 256px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.profile-overview__profile-picture img {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    margin-left: 4px;
+    margin-top: 4px;
+    border-radius: 3px;
+    object-fit: cover;
+    background-color: white;
+}
+
+.profile-overview__info {
+    color: #737373;
+    margin-bottom: 10px;
+}
+
+.profile-overview__info .value {
+    float: right;
+    color: black;
+}
+
+.profile-overview__info:last-of-type {
+    margin: 0;
+}
+
+.profile-overview__info i {
+    margin-right: 10px;
+}
+
+.el-card {
+    border: 1px solid #DADEE1 !important;
+}
+
+.el-card h4 {
+    margin: 15px;
+}
+
+.el-card p {
+    margin: 15px;
+}
+
+.el-card img {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-button {
+    width: 100%;
+    margin-bottom: 25px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    #main_wrapper__users {
+        width: 100%;
+        padding: 15px;
+        margin-top: 75px;
+        overflow: hidden;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

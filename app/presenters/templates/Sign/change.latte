@@ -1,0 +1,30 @@
+{block content}
+    <div class='background'></div>
+    {* Obrazovka pro změnu hesla *}
+    <div class='sign-page'>
+        {* Obalovač *}
+        <div class='form-wrapper'>
+            {* Nadpis *}
+            <h1>Změna hesla</h1>
+            {* Úspěšné hlášení *}
+            {ifset $success}
+                <el-alert class='sign-success' title='Úspěch' type='success' description='{$success}' show-icon />
+            {/ifset}
+            {* Formulář *}
+            <form class='sign-form' n:name=passwordChangeForm>
+                {* Heslo *}
+                <label>Nové heslo
+                    <input n:name='password' type='password' placeholder='****' />
+                </label>
+                {* Submit *}
+                <el-button type='primary' native-type='submit'>Potvrdit</el-button>
+            </form>
+            {* Info boxík *}
+            <div class='info-box'>
+                <span>Bezpečné heslo je dostatečně dlouhé a obsahuje kombinaci číslic, malých a velkých písmen nebo speciálních znaků.</span>
+            </div>
+            {* Credit *}
+            <div class='info-credit'>Copyright © {date('Y')} | SSPŠ</div>
+        </div>
+    </div>
+{/block}

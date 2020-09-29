@@ -1,0 +1,31 @@
+parameters:
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+
+session:
+	savePath: "%tempDir%/sessions"
+	expiration: 14 days
+
+database:
+	dsn: 'mysql:host=172.27.0.20;dbname=skriptasspscz'
+	user: skriptasspscz
+	password: Ohquier8eay5
+	options:
+		lazy: yes
+
+
+services:
+	- App\Model\UserManager
+	- App\Model\PermissionManager
+	router: App\Router\RouterFactory::createRouter
+	userRepository:
+		class: App\Repositories\UserRepository
+	bookRepository:
+		class: App\Repositories\BookRepository
+	documentRepository:
+		class: App\Repositories\DocumentRepository

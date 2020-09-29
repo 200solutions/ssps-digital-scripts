@@ -1,0 +1,39 @@
+{block content}
+    <div class='background'></div>
+    {* Přihlašovací obrazovka *}
+    <div class='sign-page'>
+        {* Obalovač *}
+        <div class='form-wrapper'>
+            {* Nadpis *}
+            <h1>Přihlásit se</h1>
+            {* Chybové hlášení *}
+            {ifset $error}
+                <el-alert class='sign-error' title='Chyba' type='error' description='{$error}' show-icon />
+            {/ifset}
+            {* Úspěšné hlášení *}
+            {ifset $success}
+                <el-alert class='sign-success' title='Úspěch' type='success' description='{$success}' show-icon />
+            {/ifset}
+            {* Přihlašovací formulář *}
+            <form class='sign-form' n:name='signInForm'>
+                {* Email *}
+                <label>E-Mail
+                    <input n:name='email' type='email' placeholder='Jan.Novak@email.cz' />
+                </label>
+                {* Heslo *}
+                <label>Heslo
+                    <span><a n:href='Sign:restore'>Zapomenuté heslo?</a></span>
+                    <input n:name='password' type='password' placeholder='****' />
+                </label>
+                {* Submit *}
+                <el-button type='primary' native-type='submit'>Přihlásit se</el-button>
+            </form>
+            {* Info boxík *}
+            <div class='info-box'>
+                Ještě nemáte účet? <span><a n:href='Sign:up'>Založte si ho!</a></span>
+            </div>
+            {* Credit *}
+            <div class='info-credit'>Copyright © {date('Y')} | SSPŠ</div>
+        </div>
+    </div>
+{/block}

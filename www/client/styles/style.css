@@ -1,0 +1,128 @@
+/* Vše */
+* {
+    /* Rodina písem */
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+
+    /* Style reset */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    /* Vyhlazování písma */
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Překrývná vrstva stránky */
+#cover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: white;
+	z-index: 998;
+}
+
+/* Zresetuje odkazy */
+a {
+    text-decoration: none;
+}
+
+/* Font consolas */
+@font-face {
+    font-family: Consolas;
+    src: url(./../fonts/consolas.ttf);
+}
+
+/* Přepíše vzhled codex-loaderu */
+.codex-editor__loader::before {
+    border: 2px solid #00497B;
+    border-top-color: transparent;
+}
+
+.codex-editor__loader.editor__loader {
+    margin-left: 400px !important;
+}
+
+/* Error styly */
+.error-box {
+    /* Odsazení */
+    padding: 25px;
+}
+
+/* Název chyby */
+.error-title {
+    /* Písmo */
+    font-size: 2em;
+    letter-spacing: .01em;
+
+    /* Odsazení */
+    margin-bottom: 25px;
+}
+
+/* Obsah */
+.error-message {
+    /* Odsazení */
+    margin-bottom: 35px;
+
+    /* Písmo */
+    opacity: .75;
+}
+
+/* Chybový kód */
+.error-code {
+    /* Písmo */
+    color: #F56C6C;
+}
+
+#ie-fallback {
+    display: none;
+}
+
+.error-no-js {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 999;
+    overflow-y: hidden;
+}
+
+/* Barva aktivní položky v menu (uživatelský profil) */
+.user-menu .el-menu-item.is-active {
+    background-color: #ecf5ff !important;
+}
+
+/* Dodělá stín (spodní rámeček) pod primární tlačítko */
+.el-button:not(.is-round, .el-button--text, .is-disabled) {
+    /* Rámeček */
+    border-bottom: 2px solid rgba(0, 0, 0, .2);
+}
+
+/* Pomocné třídy */
+.fl-right {
+    float: right;
+}
+
+/* CSS pro telefony */
+@media only screen and (max-width: 768px) {
+    .inline-code, .cdx-term {
+        white-space: normal;
+    }
+}
+
+/* Pravidla pro tisk */
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+
+    .inline-code {
+        border: 1px solid rgba(250, 239, 240, 0.78) !important;
+    }
+}

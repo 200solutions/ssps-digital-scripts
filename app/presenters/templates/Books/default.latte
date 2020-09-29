@@ -1,0 +1,12 @@
+{block content}
+    {* Máme validní ID? *}
+    {if $id != -1}
+        {* Client-side render učebnice *}
+        <book-root :target="{$id}"></book-root>
+    {else}
+        {* Zobrazíme chybové hlášení *}
+        <error title='Učebnice nenalezena'
+               message='Učebnice s tímto identifikátorem nebyla v naší databázi nalezena. Pravděpodobně došlo k jejímu odebrání nebo učebnice neexistuje.'
+               code='error 404'></error>
+    {/if}
+{/block}

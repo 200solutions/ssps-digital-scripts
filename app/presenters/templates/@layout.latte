@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	{* Hlavička *}
+	<head>
+		{* Meta tagy *}
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width'>
+		{* Nadpis *}
+		<title>Smíchovská střední průmyslová škola | Skripta</title>
+		{* Styly *}
+		<link rel='stylesheet' href='{$basePath}/client/styles/element.css'>
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+		<link rel='stylesheet' href='{$basePath}/client/styles/style.css'>
+		<link rel='stylesheet' href='{$basePath}/client/styles/editor.css'>
+		<link rel='stylesheet' href='{$basePath}/client/styles/prism.css'>
+		<link rel='stylesheet' href='{$basePath}/client/styles/owl-carousel.css'>
+		<link rel='stylesheet' href='{$basePath}/client/styles/_home.css'>
+		<link rel='stylesheet' href='{$basePath}/client/styles/_header.css'>
+		<link rel='stylesheet' href='{$basePath}/client/styles/_user.css'>
+		<link rel='stylesheet' href='{$basePath}/client/styles/_sign.css'>
+		<link rel='stylesheet' href='{$basePath}/client/styles/_book.css'>
+		<link rel='stylesheet' href='{$basePath}/client/styles/code-mirror.css'>
+		<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css'>
+		{* Fonty *}
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap'>
+		{* Google AdSense *}
+		<script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: 'ca-pub-2934445377419280',
+			enable_page_level_ads: true
+			});
+		</script>
+		{* Google Analytics *}
+		<script async src='https://www.googletagmanager.com/gtag/js?id=UA-161327025-1'></script>
+	</head>
+	{* Tělo *}
+	<body class='tex2jax_ignore'>
+		{* Flash zprávy *}
+		<div n:foreach='$flashes as $flash' n:class='flash, $flash->type'>{$flash->message}</div>
+		{* Error pro IE *}
+		<div id='ie-fallback'>
+			<div class='error-box'>
+		        <!-- Nadpis -->
+		        <h2 class='error-title'>Nepodporovaný prohlížeč</h2>
+		        <!-- Obsah -->
+		        <p class='error-message'>Tyto stránky nejsou optimalizované pro Internet Explorer. Použijte prosím jakýkoliv jiný prohlížeč.</p>
+		        <!-- Chybový kód -->
+		        <p class='error-code'>error glb-01</p>
+		    </div>
+		</div>
+		{* Error pro JS *}
+		<noscript>
+			<div class='error-box error-no-js'>
+		        <!-- Nadpis -->
+		        <h2 class='error-title'>JavaScript je vypnutý</h2>
+		        <!-- Obsah -->
+		        <p class='error-message'>Tyto stránky nemohou fungovat bez povoleného JavaScriptu. Zkontrolujte nastavení svého prohlížeče.</p>
+		        <!-- Chybový kód -->
+		        <p class='error-code'>error glb-02</p>
+		    </div>
+		</noscript>
+		{* Clona *}
+		<div id='cover'></div>
+		{* Vue kontejner *}
+	    <div id='app'>
+			{* Obsah *}
+			{include content}
+	    </div>
+		{* Skripty *}
+		{block scripts}
+			{* Závislosti *}
+			<script src='{$basePath}/client/lib/vue-dev.js'></script>
+			<script src='{$basePath}/client/lib/vue-loader.js'></script>
+			<script src='{$basePath}/client/lib/vue-router.js'></script>
+			<script src='{$basePath}/client/lib/sass-compiler.js'></script>
+			<script src='{$basePath}/client/lib/jquery.js'></script>
+			<script src='{$basePath}/client/lib/element.js'></script>
+			<script src='{$basePath}/client/lib/element-czech.js'></script>
+			<script src='{$basePath}/client/lib/prism.js'></script>
+			<script src='{$basePath}/client/lib/owl-carousel.js'></script>
+			<script src='https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js'></script>
+
+			{* Logika *}
+			<script src='{$basePath}/client/model/ie-fallback.js'></script>
+
+			{* Katex *}
+			<script defer src='https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js'></script>
+
+			{* Editor *}
+			<script src='//cdn.jsdelivr.net/npm/sortablejs@1.8.4/Sortable.min.js'></script>
+			<script src='//cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.20.0/vuedraggable.umd.min.js'></script>
+
+			{* Entry point aplikace *}
+			<script src='{$basePath}/bootstrap.js'></script>
+		{/block}
+	</body>
+</html>

@@ -1,0 +1,192 @@
+/* Bloky - styly, když jsou bloky viditelné */
+.view-blocks .ce-block {
+    border: 1px dashed rgba(0, 0, 0, .25);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* Asciinema */
+.ce-asciinema {
+    margin-top: 20px !important;
+    padding: 10px 12px;
+    border: 1px solid rgba(201, 201, 204, .48);
+    box-shadow: inset 0 1px 2px 0 rgba(35, 44, 72, .06);
+    border-radius: 3px;
+    outline: none;
+    font-size: 1em;
+    width: 100%;
+}
+
+.asciicast {
+    margin-top: 0 !important;
+}
+
+/* Odstavec */
+.ce-paragraph {
+    margin-top: 20px !important;
+}
+
+/* Code block */
+.ce-code-block {
+    margin: 20px 0;
+}
+
+.ce-code-block textarea {
+    /* Rozměry */
+    width: 100%;
+    height: 150px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.ce-code-block input {
+    /* Rozměry */
+    width: 75%;
+}
+
+.ce-code-block select {
+    /* Odsazení */
+    margin-top: 5px;
+    margin-left: 8px;
+
+    /* Rozměry */
+    width: calc(25% - 8px);
+}
+
+.ce-code-block textarea:focus, .ce-code-block input:focus {
+    outline: none;
+}
+
+/* Alert */
+.ce-alert {
+    /* Pozice */
+    position: relative;
+
+    /* Odsazení */
+    padding: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+
+    /* Vzhled */
+    background-color: #f8f8f8;
+    text-align: justify;
+    font-size: 16px;
+	letter-spacing: 0.01em;
+    line-height: 1.75em;
+}
+
+.ce-alert::before {
+    position: absolute;
+    top: 14px;
+    left: -12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 20px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #fff;
+}
+
+.danger {
+    border-left: 4px solid #f66 !important;
+}
+
+.danger::before {
+    background-color: #f66;
+    content: '×';
+}
+
+.info {
+    border-left: 4px solid #409EFF;
+}
+
+.info::before {
+    background-color: #409EFF;
+    content: 'i';
+}
+
+.warning {
+    border-left: 4px solid #FFAA2C;
+}
+
+.warning::before {
+    background-color: #FFAA2C;
+    content: '!';
+}
+
+/* Image block (tool) - upraví zobrazení v editoru */
+.image-tool {
+    /* Odsazení */
+    margin-top: 20px;
+}
+
+.image-tool__image {
+    border: 1px solid #ddd;
+}
+
+.image-tool__image-picture {
+    /* Zobrazení */
+    display: block !important;
+
+    /* Rozměry */
+    width: auto !important;
+    max-width: 100% !important;
+    max-height: 60vh;
+
+    /* Odsazení */
+    padding: 10px !important;
+}
+
+/* Zakryje všechny defaultní možnosti */
+.image-tool__tune {
+    display: none;
+}
+
+/* Tooly */
+.cdx-term {
+	border: 1px solid #eaeefb;
+	padding: 3px 5px;
+	margin: 0 2px;
+	background-color: #f9fafc;
+    border-radius: 4px;
+    font-size: 16px !important;
+    white-space: nowrap;
+}
+
+.cdx-math {
+    display: inline-block;
+    border: 1px solid #eee;
+    padding: 0 5px;
+    margin: 0 2px;
+    border-radius: 4px;
+    font-size: 16px !important;
+    white-space: nowrap;
+}
+
+/* Vlastní styly pro codex editor */
+select.cdx-select {
+    /* Rozměry */
+    margin-top: 5px;
+    box-sizing: border-box;
+
+    /* Vzhled */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    border: 1px solid rgba(201, 201, 204, .48);
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 0 12px;
+    height: 39px;
+    box-shadow: inset 0 1px 2px 0 rgba(35, 44, 72, .06);
+}
+
+.cdx-input {
+    /* Opraví font size */
+    font-size: 15px;
+}
