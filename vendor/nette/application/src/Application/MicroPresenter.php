@@ -67,8 +67,8 @@ final class MicroPresenter implements Application\IPresenter
 		}
 
 		$params = $request->getParameters();
-		if (!isset($params['callback'])) {
-			throw new Nette\InvalidStateException('Parameter callback is missing.');
+		$callback = isset($params['callback']) ? $params['callback'] : null; if (!$callback instanceof \Closure) { // CVE-2020-15227 - patched by 200solutions
+			throw new Application\BadRequestException('Parameter callback is not a valid closure.');
 		}
 		$callback = $params['callback'];
 		$reflection = Nette\Utils\Callback::toReflection(Nette\Utils\Callback::check($callback));
