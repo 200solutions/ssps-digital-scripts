@@ -139,6 +139,11 @@ final class UserPresenter extends Nette\Application\UI\Presenter
     * @param stdClass $values hodnoty
 	*/
     public function profilePictureFormSucceeded(UI\Form $form, \stdClass $values) : void {
+	// Oprávnění
+        if ($this->getParameter('id') != $this->getUser()->getId())
+            // Přesměrujeme uživatele na stránku s chybou
+            $this->redirect('this#account', ['error' => 'Nelze změnit profilový obrázek jinému uživateli']);
+
         // Soubor
         $file = $values->file;
 
