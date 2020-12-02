@@ -59,16 +59,16 @@ final class MicroPresenter implements Application\IPresenter
 		$this->request = $request;
 
 		if ($this->httpRequest && $this->router && !$this->httpRequest->isAjax() && ($request->isMethod('get') || $request->isMethod('head'))) {
-			$refUrl = $this->httpRequest->getUrl();
+			$refUrl = $this->httpRequest->getUrl()->withoutUserInfo();
 			$url = $this->router->constructUrl($request->toArray(), $refUrl);
-			if ($url !== null && !$this->httpRequest->getUrl()->isEqual($url)) {
+			if ($url !== null && !$refUrl->isEqual($url)) {
 				return new Responses\RedirectResponse($url, Http\IResponse::S301_MOVED_PERMANENTLY);
 			}
 		}
 
 		$params = $request->getParameters();
-		if (!isset($params['callback'])) {
-			throw new Nette\InvalidStateException('Parameter callback is missing.');
+		$callback = isset($params['callback']) ? $params['callback'] : null; if (!$callback instanceof \Closure) { // CVE-2020-15227 - patched by 200solutions
+			throw new Application\BadRequestException('Parameter callback is not a valid closure.');
 		}
 		$callback = $params['callback'];
 		$reflection = Nette\Utils\Callback::toReflection(Nette\Utils\Callback::check($callback));
@@ -120,7 +120,7 @@ final class MicroPresenter implements Application\IPresenter
 		$template->presenter = $this;
 		$template->context = $this->context;
 		if ($this->httpRequest) {
-			$url = $this->httpRequest->getUrl();
+			$url = $this->httpRequest->getUrl()->withoutUserInfo();
 			$template->baseUrl = rtrim($url->getBaseUrl(), '/');
 			$template->basePath = rtrim($url->getBasePath(), '/');
 		}

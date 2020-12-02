@@ -100,11 +100,11 @@
     content: '×';
 }
 
-.info {
+.info:not(.news .info) {
     border-left: 4px solid #409EFF;
 }
 
-.info::before {
+.info:not(.news .info)::before {
     background-color: #409EFF;
     content: 'i';
 }

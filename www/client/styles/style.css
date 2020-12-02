@@ -1,8 +1,10 @@
 /* Vše */
-* {
+*:not(.fa, .fab, .fal, .far, .fas) {
     /* Rodina písem */
     font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
 
+* {
     /* Style reset */
     padding: 0;
     margin: 0;
@@ -10,7 +12,6 @@
 
     /* Vyhlazování písma */
     font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
 }
 
 /* Překrývná vrstva stránky */
@@ -27,6 +28,10 @@
 /* Zresetuje odkazy */
 a {
     text-decoration: none;
+}
+
+footer a {
+    color: #00406C;
 }
 
 /* Font consolas */

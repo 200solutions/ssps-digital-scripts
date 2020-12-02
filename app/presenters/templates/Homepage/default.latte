@@ -1,6 +1,57 @@
 {block content}
     {* Hlavička *}
-    {include '../_header.latte', plain => false, active => 'home'}
+    <ssps-header
+    :carousels='[
+    {"name":"Učení ti teď půjde lépe","content":"Skripta o tom co učíme, od těch co to učí, pro ty co se to učí.","type":"image","media":"https://skripta.ssps.cz/client/images/hero2-min.jpg"},
+    {"name":"Digitální skripta Smíchovské průmyslovky","content":"Vzdělávání mimo školní lavice.","type":"image","media":"https://skripta.ssps.cz/client/images/hero1-min.jpg"},
+    {"name":"Vzdělávání online","content":"Brána k modernímu vzdělávání.","type":"image","media":"https://skripta.ssps.cz/client/images/hero4-min.jpg"}]'
+
+:news='[{"date":{"day":"03","month":"SRP"},"icon":"exclamation-triangle","link":"http:\/\/ssps.200solutions.com\/ucitelum-pomaha-i-studentske-radio\/","title":"U\u010ditel\u016fm pom\u00e1h\u00e1 i studentsk\u00e9 r\u00e1dio","content":"\u010cl\u00e1nek z 7.4. z MF Dnes o na\u0161ich aktivit\u00e1ch v dob\u011b pandemie najdete ZDE:"},{"date":{"day":"02","month":"SRP"},"icon":"calendar-alt","link":"http:\/\/ssps.200solutions.com\/informace-pro-rodice-studentu\/","title":"Informace pro rodi\u010de student\u016f","content":"V\u00e1\u017een\u00ed rodi\u010de, dovolte mi abych&#8230;"},{"date":{"day":"02","month":"SRP"},"icon":"bullhorn","link":"http:\/\/ssps.200solutions.com\/testovaci-aktualita\/","title":"Testovac\u00ed aktualita","content":"Na p\u0159elomu pond\u011bln\u00edho ve\u010dera a \u00fatern\u00edho r\u00e1na jsme vyrazili z Prahy sm\u011brem..."},{"date":{"day":"29","month":"\u010cVC"},"icon":"file-alt","link":"http:\/\/ssps.200solutions.com\/2-kolo-prijimaciho-rizeni-neorganizujeme\/","title":"2. kolo p\u0159ij\u00edmac\u00edho \u0159\u00edzen\u00ed &#8211; NEORGANIZUJEME","content":"2. kolo p\u0159ij\u00edmac\u00edho \u0159\u00edzen\u00ed SSP\u0160 neorganizuje. SSP\u0160 naplnila kapacitu v\u0161ech obor\u016f vzd\u011bl\u00e1n\u00ed v 1. kole."}]'
+:video='{"video":"<iframe title=\"Sm\u00edchovsk\u00e1 st\u0159edn\u00ed pr\u016fmyslov\u00e1 \u0161kola\" width=\"640\" height=\"360\" src=\"https:\/\/www.youtube.com\/embed\/lrfJOG97VMU?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>","image":"http:\/\/ssps.200solutions.com\/wp-content\/uploads\/2020\/07\/miachel.png","text":"O na\u0161\u00ed \u0161kole"}'
+systems="http://ssps.200solutions.com/studenti/systemy/"
+more="Více"
+:defaultbackground="'http://ssps.200solutions.com/wp-content/themes/ssps/images/school.jpg'"
+    >
+    <template v-slot:logo>
+ <a href="https://skripta.ssps.cz" aria-label="Hlavní stránka">
+   <img src="https://www.ssps.cz/wp-content/themes/ssps-wordpress-theme/images/logo.svg" alt />
+ </a>
+</template>
+<template v-slot:navigation>
+ <div class="menu-menu-1-container">
+   <ul id="menu-menu-1" class="menu">
+     <li
+       id="menu-item-209"
+       class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-22 current_page_item menu-item-209"
+     >
+       <a n:href='Homepage:default' aria-current="page">Hlavní stránka</a>
+     </li>
+     {* Můj profil *}
+     {if $presenter->getUser()->isLoggedIn()}
+     <li
+       id="menu-item-285"
+       class="menu-item menu-item-type-post_type menu-item-object-page menu-item-285"
+     >
+            <a n:href='User:default#books $presenter->getUser()->id'>Můj profil</a>
+     </li>
+      {/if}
+     <li
+       id="menu-item-215"
+       class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215"
+     >
+         {* Odhlásit / přihlásit *}
+         {if $presenter->getUser()->isLoggedIn()}
+             {* Odhlásit se *}
+             <a n:href='Sign:out'>Odhlásit</a>
+         {else}
+             {* Přihlásit se *}
+             <a n:href='Sign:in'>Přihlásit</a>
+         {/if}
+     </li>
+   </ul>
+ </div>
+</template>
+    </ssps-header>
     {* Hlavní stránka *}
     <div id='main_wrapper__homepage'>
         {* Carousely knih *}
@@ -57,7 +108,7 @@
         <footer>
             <div class='credits'>
                 <span class='credits__copyright'>Copyright © {date('Y')} | Smíchovská střední průmyslová škola</span>
-                <span class='credits__author'>Code & Design by Marek Kejda</span>
+                <span class='credits__author'>Code & Design by <a href='https://200solutions.com'>200solutions</a></span>
             </div>
         </footer>
     </div>

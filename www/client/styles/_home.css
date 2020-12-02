@@ -1,13 +1,12 @@
 /* Druhé nadpisy */
-#main_wrapper__homepage {
-    padding-top: 75px;
-}
+
 
 #main_wrapper__homepage p {
     letter-spacing: .05em;
 }
 
 h2 {
+    font-family: 'Raleway' !important;
     position: relative;
     letter-spacing: 2px;
 }
@@ -29,6 +28,7 @@ h2 {
 .section-book-carousel h2 {
     margin-bottom: 25px;
     padding-left: 75px;
+    font-family: 'Raleway' !important;
 }
 
 /* Carousel knih */
@@ -146,6 +146,7 @@ h2 {
 }
 
 #section-ladder h2 {
+    font-family: 'Raleway' !important;
     margin-top: 50px;
     margin-bottom: 50px;
     padding-left: 75px;
@@ -232,6 +233,7 @@ h2 {
 }
 
 #section-news h2 {
+    font-family: 'Raleway' !important;
     padding-top: 25px;
     margin-bottom: 50px;
 }
@@ -350,6 +352,7 @@ h2 {
 }
 
 #section-continue h2 {
+    font-family: 'Raleway' !important;
     padding-top: 50px;
 }
 
@@ -502,6 +505,7 @@ footer .credits__author {
     }
 
     .section-book-carousel h2 {
+        font-family: 'Raleway' !important;
         margin-bottom: 25px;
         padding-left: 25px;
     }
@@ -523,12 +527,14 @@ footer .credits__author {
     }
 
     #section-subjects h2 {
+        font-family: 'Raleway' !important;
         margin-top: 25px;
         margin-bottom: 40px;
     }
 
     /* Sekce žebříček */
     #section-ladder h2 {
+        font-family: 'Raleway' !important;
         padding-left: 25px;
         margin-top: 25px;
     }
@@ -557,6 +563,7 @@ footer .credits__author {
     }
 
     #section-news h2 {
+        font-family: 'Raleway' !important;
         padding-top: 0;
     }
 
@@ -584,6 +591,7 @@ footer .credits__author {
     }
 
     #section-continue h2 {
+        font-family: 'Raleway' !important;
         padding-top: 0;
     }
 

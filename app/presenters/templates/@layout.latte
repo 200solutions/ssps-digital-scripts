@@ -9,7 +9,11 @@
 		<title>Smíchovská střední průmyslová škola | Skripta</title>
 		{* Styly *}
 		<link rel='stylesheet' href='{$basePath}/client/styles/element.css'>
-		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+		<script src="https://kit.fontawesome.com/eb7f4bdf60.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 		<link rel='stylesheet' href='{$basePath}/client/styles/style.css'>
 		<link rel='stylesheet' href='{$basePath}/client/styles/editor.css'>
 		<link rel='stylesheet' href='{$basePath}/client/styles/prism.css'>
@@ -23,14 +27,14 @@
 		<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css'>
 		{* Fonty *}
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap'>
-		{* Google AdSense *}
+		{* Google AdSense
 		<script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
 		<script>
 			(adsbygoogle = window.adsbygoogle || []).push({
 			google_ad_client: 'ca-pub-2934445377419280',
 			enable_page_level_ads: true
 			});
-		</script>
+		</script> *}
 		{* Google Analytics *}
 		<script async src='https://www.googletagmanager.com/gtag/js?id=UA-161327025-1'></script>
 	</head>
@@ -93,6 +97,9 @@
 
 			{* Entry point aplikace *}
 			<script src='{$basePath}/bootstrap.js'></script>
+
+			{* Vánoční sníh *}
+			<script src='{$basePath}/client/lib/snow.js'></script>
 		{/block}
 	</body>
 </html>

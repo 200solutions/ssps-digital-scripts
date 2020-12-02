@@ -91,7 +91,7 @@ class Templated5e61d8f09 extends Latte\Runtime\Template
         <footer>
             <div class='credits'>
                 <span class='credits__copyright'>Copyright © <?php echo LR\Filters::escapeHtmlText(date('Y')) /* line 57 */ ?> | Smíchovská střední průmyslová škola</span>
-                <span class='credits__author'>Code & Design by Marek Kejda</span>
+                <span class='credits__author'>Code & Design by <a href='https://200solutions.com'>200solutions</a></span>
             </div>
         </footer>
 	</div>

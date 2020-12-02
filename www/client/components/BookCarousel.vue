@@ -1,6 +1,6 @@
 <template>
     <!-- Carousel knih -->
-    <div class='carousel owl-carousel'>
+    <div class='book-carousel-component book-carousel owl-carousel'>
         <!-- Iterace itemy -->
         <div class='book-item' v-for='book in books' :key='book.id'>
             <!-- Kniha -->
@@ -50,7 +50,7 @@
             // barvičky knih:
             Vue.nextTick(() => {
                 // Inicializace owl carouselu knih
-                $('.carousel').owlCarousel({
+                $('.book-carousel').owlCarousel({
                     // Navigace
                     nav: true,
                     // Zobrazovat číselník položek
@@ -96,6 +96,7 @@
 </script>
 
 <style lang='scss'>
+.book-carousel-component {
     // Carousel knih
     .book-carousel {
         // Pozice
@@ -255,4 +256,5 @@
             padding-top: 250px;
         }
     }
+}
 </style>

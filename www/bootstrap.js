@@ -45,7 +45,8 @@ $.get('/api/get-model', (res) => {
             'book-section': httpVueLoader('/client/components/BookSection.vue'),
             'ladder': httpVueLoader('/client/components/Ladder.vue'),
             'book-overview': httpVueLoader('/client/components/BookOverview.vue'),
-            'redactors-list': httpVueLoader('/client/components/RedactorsList.vue')
+            'redactors-list': httpVueLoader('/client/components/RedactorsList.vue'),
+            'ssps-header': httpVueLoader('/client/components/Header.vue')
         },
         // Router
         router: new VueRouter({

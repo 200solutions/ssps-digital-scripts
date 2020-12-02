@@ -36,7 +36,7 @@ class Template55dcb42cd1 extends Latte\Runtime\Template
 		extract($_args);
 ?>
     <div class='top-bar' style=''>
-		<div class='container'>
+		<div class='header-container'>
 			<el-row>
 				<el-col :xs='24' :sm='18'>
 					<ul class='contact-details'>

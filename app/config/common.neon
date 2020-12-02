@@ -14,7 +14,7 @@ session:
 database:
 	dsn: 'mysql:host=172.27.0.20;dbname=skriptasspscz'
 	user: skriptasspscz
-	password: Ohquier8eay5
+	password: uup8uQuewoz9Ieya
 	options:
 		lazy: yes
 
